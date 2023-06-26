@@ -45,3 +45,65 @@
 // for(let kv of Object.entries(vehicle)){
 //     console.log(kv)
 // }
+
+// Object literal
+
+let amol = {
+    firstName:"amol",
+    lastName:"rao",
+    age:23,
+    display:function(){
+        console.log(this.firstName + this.lastName)
+    }
+}
+
+amol.display()
+
+let chinmay = {
+    firstName:"chinmay",
+    lastName:"deshpande",
+    age:33,
+    display:function(){
+        console.log(this.firstName + this.lastName)
+    }
+}
+
+chinmay.display()
+
+// 100 object
+// template
+// user defined datatype
+
+
+// function construtor  ----- objects
+// Es6 class            ----- objects
+// Object.Create        ----- objects
+
+
+// function constructor  
+function Person(fn,ln,age){
+    this.firstName = fn
+    this.lastName  =ln
+    this.age = age
+    this.display = function(){
+        console.log(this.firstName + this.lastName)
+    }
+}
+let hemant = new Person("hemant","deshmukh",44)
+let ram = new Person("ram","dani",33)
+console.log(hemant)
+console.log(ram)
+
+// retrive 
+console.log(ram.firstName)
+// update 
+ram.firstName = "ram lord"
+// add 
+ram.language = "sanskrit"
+// delete 
+delete ram.lastName
+
+console.log(ram)
+console.log(hemant)
+
+
