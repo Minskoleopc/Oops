@@ -91,6 +91,7 @@ class Student {
     }
 }
 
+console.log('hello')
 
 class Teacher  extends Student{
     constructor(fn,ln,salary){
