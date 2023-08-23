@@ -58,7 +58,6 @@ var lastName = "dani"
 // info.display()
 
 // program 4
-
 let info = {
     firstName:"chinmay",
     lastName:"deshande",

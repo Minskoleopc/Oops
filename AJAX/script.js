@@ -56,7 +56,6 @@
 
 
 // let buttonA = document.querySelector('button')
-
 // buttonA.addEventListener('click', function () {
 //     q1.data.forEach(function (el) {
 //         // console.log(el.email)
@@ -73,27 +72,27 @@
 // })
 
 
-// fetch()
+
 
 
 // program 2 
-let buttonA = document.querySelector('button')
-function getUsers() {
-    fetch('https://reqres.in/api/users?page=1')
-        .then(function (res) {
-            return res.json()
-        })
-        .then(function (res) {
-            res.data.forEach(el => {
-                document.write(`<h1>${el.id}</h2>`)
-                document.write(`<h3>${el.first_name}${el.last_name}</h3>`)
-                document.write(`<p>${el.email}</p>`)
-                document.write(`<img src = ${el.avatar}>`)
-            });
-        })
-}
+// let buttonA = document.querySelector('button')
+// function getUsers() {
+//     fetch('https://reqres.in/api/users?page=1')
+//         .then(function (res) {
+//             return res.json()
+//         })
+//         .then(function (res) {
+//             res.data.forEach(el => {
+//                 document.write(`<h1>${el.id}</h2>`)
+//                 document.write(`<h3>${el.first_name}${el.last_name}</h3>`)
+//                 document.write(`<p>${el.email}</p>`)
+//                 document.write(`<img src = ${el.avatar}>`)
+//             });
+//         })
+// }
 
-buttonA.addEventListener('click',getUsers)
+// buttonA.addEventListener('click',getUsers)
 
 
 

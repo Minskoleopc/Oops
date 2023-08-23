@@ -85,6 +85,7 @@ class Student {
     constructor(fn,ln){
         this.firstName = fn 
         this.lastName = ln
+        
     }
     displayName(){
         console.log(this.firstName + this.lastName)

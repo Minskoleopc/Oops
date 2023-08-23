@@ -103,7 +103,7 @@ let obj = {
     }
 }
 
-let amolj = Object.create(obj)
+let amolj = Object.create(gi)
 console.log(amolj)
 amolj.init('amolj','raoj')
 amolj.display()
