@@ -1,145 +1,78 @@
+let students = [
+    {
+        firstName:"chinmay",
+        lastName:"deshpande",
+        age:31,
+        skills:["python","java","javascript"]
+    },
+
+    {
+        firstName:"amol",
+        lastName:"rao",
+        age:32,
+        skills:["java","selenium"]
+    },
+    {
+        firstName:"sarika",
+        lastName:"pansare",
+        age:30,
+        skills:["java","javascript","selenium","cypress"]
+    },
+
+    {
+        firstName:"mayuri",
+        lastName:"katwe",
+        age:26,
+        skills:["python","java","javascript","selenium","sql","excel"]
+
+    }
+
+]
+
+//console.log(students[0].firstName)
+
 // program 1
-function additionA(){
-    console.log("A")
-}
-function additionB(){
-    console.log("B")
-}
-//additionA()
-//additionB()
+students.forEach(function(el,index,arr){
+    console.log(el.firstName)
+})
 
-// program 2
-function additionC(){
-    setTimeout(function(){
-        console.log("hello")
-    },3000)
-}
+// program 2 (firstName+lastName)
 
-function additionD(){
-    console.log("bye")
+students.forEach(function(el){
+    console.log(el.firstName+ el.lastName)
+})
 
-}
-//additionC()
-//additionD()
+// program 3 chinmay:5
+students.forEach(function(el){
+    console.log(el.firstName + ":"+el.skills.length)
+})
 
+// program 4 "prompt enginner"
+students.forEach(function(el){
+    el.skills.push("prompt enginner")
+})
+console.log(students)
 
-// program 3
-// async --- sync
-function getInfo(){
-    setTimeout(function(){
-        console.log("user created")
-    },3000),
-    setTimeout(function(){
-        console.log("Get user by id")
-    },2000),
-    setTimeout(function(){
-        console.log("Get info")
-    },1000)
+// program 5 (age > 30)
 
-}
-//getInfo()
-
-// program 4
-function getInfo(){
-    setTimeout(function(){
-        console.log("user created")
-        setTimeout(function(){
-            console.log("Get user by id")
-            setTimeout(function(){
-                console.log("Get info")
-            },1000)
-        },2000)
-    },3000
-)}
-//getInfo()
-
-//  Promises() ---- async code synchronously
-
-// let pro = new Promise(function(resolve , reject){
-//     let a = 10
-//     let b = 5
-//     if(a == b){
-//         resolve("hello")
-//     }
-//     else {
-//         reject("bye")
-//     }
-// })
-
-// consuming promises with  then 
-// pro.then(function(q1){
-//     console.log(q1)
-// },function(q2){
-//     console.log(q2)
-// })
-
-// consuming promises with  then catch 
-// pro.then(function(q1){
-//     console.log(q1)
-// })
-// .catch(function(q2){
-//     console.log(q2)
-// })
-
-// consuming promises with  then catch finally
-// pro.then(function(q1){
-//     console.log(q1)
-// })
-// .catch(function(q2){
-//     console.log(q2)
-// })
-// .finally(function(){
-//     console.log("finally")
-// })
-
-
-// program 4
-let pro3 = new Promise(function(resolve,reject){
-    let name = "chinay"
-    if(name.length >= 7){
-        resolve("hello")
+students.forEach(function(el,index,arr){
+    if(el.age > 30){
+        console.log(el.firstName)
     }
-    else {
-        reject("bye")
+})
+
+// program 6 user with python skills
+
+students.forEach(function(el){
+    if(el.skills.includes('python')){
+        console.log(el.firstName)
     }
-
 })
 
-pro3
-.then(function(str){
-    console.log(str)
-    return "hi"
+// program 7  name of studentes age > 30  and should have skill js 
+students.forEach(function(el,index,arr){
+    if(el.age > 30 && el.skills.includes("javascript")){
+        console.log(el.firstName)
+    }
 })
-.then(function(str2){
-    console.log(str2)
-})
-.catch(function(str3){
-    console.log(str3)
-})
-.finally(function(){
-    console.log("finally")
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
