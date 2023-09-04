@@ -19,7 +19,6 @@ function userThree() {
         }, 2000)
     })
 }
-
 // Promise.all()
 // Promise.race()
 // Promise.allSettled()
@@ -28,23 +27,18 @@ function userThree() {
 // Promise.all() --- parallel promises -- 4 ---> 
 // [1,2,3,4]
 // If any one of promise is rejected , it will throw error
-
 async function getUsers() {
     let a = await Promise.all([
         userOne(),
         userTwo(),,
         //Promise.reject("fail"),
         userThree()
-
-
     ])
     console.log(a)
 }
 //getUsers()
 
-
 // Promise.allSettled()
-
 async function getUserTwo(){
     let b = await Promise.allSettled([
         userOne(),
