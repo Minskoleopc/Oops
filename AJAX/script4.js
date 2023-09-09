@@ -79,6 +79,7 @@ async function getUserFour() {
 }
 getUserFour()
 
+console.log("hello")
 
 
 
